@@ -1,0 +1,5 @@
+Day 6 - Python Functions & Karel
+working with https://reeborg.ca/
+learning about functions and while loop
+
+Today's project was about our maze runner escape from the maze. Programming the logic for escaping.
