@@ -81,4 +81,3 @@ while not exitHangman:
         print(design.color.END)
 
         exitHangman = True
-
