@@ -1,4 +1,6 @@
 import random
+import os
+import design
 
 wordsList = []
 display = []
@@ -30,10 +32,19 @@ while not exitHangman:
         if userGuess == letter:
             display[displayCounter] = letter
         else:
-            print("Nope")
+            pass
         displayCounter += 1
 
     print(display)
+
+    if ''.join(display) == chosenWord:
+        os.system("clear")
+        print(design.color.BOLD + design.color.GREEN)
+        print("You guessed the correct word " + ''.join(display).upper() + " !")
+        print("YOU WIN!")
+        print(design.color.END)
+        exitHangman = True
+
 
 
 
