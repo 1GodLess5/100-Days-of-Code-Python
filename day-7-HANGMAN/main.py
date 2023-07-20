@@ -33,7 +33,7 @@ for letter in chosenWord:
 print(display)
 
 # cheating
-#print(chosenWord)
+# print(chosenWord)
 
 # main loop
 while not exitHangman:
