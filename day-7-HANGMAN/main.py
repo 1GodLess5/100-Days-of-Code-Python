@@ -2,28 +2,38 @@ import random
 import os
 import time
 import design
+from pynput import keyboard
 
+# initial variables
 wordsList = []
 display = []
+exitHangman = False
+lives = 6
+wrongLetters = []
 
+# opening wordsList.txt file
 wordsFile = open("wordsList.txt", "r")
 for word in wordsFile:
     wordsList.append(word.strip("\n"))
 wordsFile.close()
 
+# gets random word from file
 fileLength = len(wordsList)
 chosenWord = wordsList[random.randint(0, fileLength - 1)]
 
+# initial ascii
+print(design.hangmanArt)
+input("Press any key to continue. ")
+keyboard.Events()
+os.system("clear")
+
+# start of the game
 for letter in chosenWord:
     display.append("_")
 print(display)
 
 # cheating
 print(chosenWord)
-
-exitHangman = False
-
-lives = 6
 
 # main loop
 while not exitHangman:
@@ -39,12 +49,16 @@ while not exitHangman:
         displayCounter += 1
     print(display)
 
+    # checking if users guess was correct and printing out
     if wrongGuessCounter == len(chosenWord):
         lives -= 1
+        wrongLetters.append(userGuess)
         print(f"Lives left: {lives}")
         print(design.stages[lives])
-    print("\n\n")
+    print(f"Wrong guesses: {', '.join(wrongLetters)}")
+    print("\n")
 
+    # decides if user won or not
     if ''.join(display) == chosenWord:
         time.sleep(3)
         os.system("clear")
@@ -67,25 +81,4 @@ while not exitHangman:
         print(design.color.END)
 
         exitHangman = True
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
