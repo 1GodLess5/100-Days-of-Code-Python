@@ -32,4 +32,6 @@ blankCard = '''
 |_##| 
 '''
 
+cardShapes = ["♠", "♥", "♦", "♣", "♤", "♡", "♢", "♧"]
+
 # TODO: make a functions to create the card deck logos based on the blank card
