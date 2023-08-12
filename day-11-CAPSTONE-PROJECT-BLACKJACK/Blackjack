@@ -1,0 +1,29 @@
+Blackjack
+	- as close to 21 as possible
+	- over 21 -> bust -> lose
+	- ACE -> 1 or 11
+	- 2, 3, 4, 5, 6, 7, 8, 9
+	- 10, J, Q, K
+	- if the dealer's hand is less than 17, he is forced to take another card
+	- if the dealer's hand is over 17, he cannot take another card
+
+	words:
+		- hit: takes another card
+		- stand: stay, end of the game, player doesnt take another card
+		- double: player doubles his bet and get drawn another card -> gamee ends here
+		- surrender: player surrenders, dealer takes half of his bet
+		- even money: in case player got a blakjack and dealer's first card is ACE, he can get an even money and is paid 1:1 instead of 1,5
+
+	paying:
+		- BLACKJACK -> 1.5 times players bet
+		- normal win -> 1 time players bet
+
+ ___   ___
+|## | |2  |
+|###| | ♥ |
+|_##| |__2
+
+♠ 	♥ 	♦ 	♣
+♤ 	♡ 	♢ 	♧
+
+PLAYER: 17
