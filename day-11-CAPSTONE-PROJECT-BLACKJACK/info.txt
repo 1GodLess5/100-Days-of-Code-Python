@@ -1,0 +1,2 @@
+Migrated this project into it's own repository at: 
+https://github.com/1GodLess5/Blackjack
